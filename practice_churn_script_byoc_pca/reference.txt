@@ -1,0 +1,38 @@
+
+
+# SageMaker Inference Toolkit
+
+https://github.com/aws/sagemaker-inference-toolkit
+
+# Building your own algorithm container
+
+https://github.com/awslabs/amazon-sagemaker-examples/blob/master/advanced_functionality/scikit_bring_your_own/scikit_bring_your_own.ipynb
+
+# How to implement PCA with Python and scikit-learn: Theory & Code
+
+https://medium.com/ai-in-plain-english/how-to-implement-pca-with-python-and-scikit-learn-22f3de4e5983
+
+# Iris Training and Prediction with Sagemaker Scikit-learn
+- Scikit Learn 스크립트 모드
+
+https://github.com/awslabs/amazon-sagemaker-examples/blob/master/sagemaker-python-sdk/scikit_learn_iris/Scikit-learn%20Estimator%20Example%20With%20Batch%20Transform.ipynb
+
+# Amazon SageMaker Custom Training containers
+- BYOC 학습 컨테이너
+
+https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/custom-training-containers
+
+# Using Scikit-learn with the SageMaker Python SDK
+- SKLearn Python SDK
+
+https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html#id2
+
+# Building your own algorithm container
+- BYOC 컨테이너 (학습, 추론)
+
+https://github.com/awslabs/amazon-sagemaker-examples/blob/master/advanced_functionality/scikit_bring_your_own/scikit_bring_your_own.ipynb
+
+# Bring Your Own Model (XGboost)
+- BYOM (로컬에서 모델 생성 후에 세이지 메이커에서 배포)
+
+https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/xgboost_bring_your_own_model
