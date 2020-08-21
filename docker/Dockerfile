@@ -1,5 +1,5 @@
 
-FROM 257758044811.dkr.ecr.us-east-2.amazonaws.com/sagemaker-scikit-learn:0.20.0-cpu-py3
+FROM 366743142698.dkr.ecr.ap-northeast-2.amazonaws.com/sagemaker-scikit-learn:0.20.0-cpu-py3
     
 # install python package
 RUN pip install joblib
