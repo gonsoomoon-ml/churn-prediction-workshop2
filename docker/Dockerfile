@@ -15,6 +15,5 @@ COPY code/* /opt/ml/code/
  
 WORKDIR /opt/ml/code
 
-# ENTRYPOINT ["python", "pca_train.py"]
 # In order to use SageMaker Env varaibles, use the statement below
 ENV SAGEMAKER_PROGRAM pca_byoc_train.py

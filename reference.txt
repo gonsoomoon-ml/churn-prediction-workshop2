@@ -1,15 +1,15 @@
 
 
+# Prebuilt Amazon SageMaker Docker Images for Scikit-learn and Spark ML
+- SKLearn 빌트인 이미지 리스트
+https://docs.aws.amazon.com/sagemaker/latest/dg/pre-built-docker-containers-frameworks.html
+
+
 # SageMaker Inference Toolkit
 추론용 커스텀 이미지를 만드는 가이드
 
 https://github.com/aws/sagemaker-inference-toolkit
 
-
-# How to implement PCA with Python and scikit-learn: Theory & Code
-Python, SKLearn으로 PCA 구현 코드
-
-https://medium.com/ai-in-plain-english/how-to-implement-pca-with-python-and-scikit-learn-22f3de4e5983
 
 # Iris Training and Prediction with Sagemaker Scikit-learn
 - Iris로 Scikit Learn 스크립트 모드
@@ -31,16 +31,21 @@ https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html
 
 https://github.com/awslabs/amazon-sagemaker-examples/blob/master/advanced_functionality/scikit_bring_your_own/scikit_bring_your_own.ipynb
 
-# Bring Your Own Model (XGboost)
-- BYOM (로컬에서 모델 생성 후에 세이지 메이커에서 배포)
 
-https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/xgboost_bring_your_own_model
-
-# Prebuilt Amazon SageMaker Docker Images for Scikit-learn and Spark ML
-- SKLearn 빌트인 이미지 리스트
-https://docs.aws.amazon.com/sagemaker/latest/dg/pre-built-docker-containers-frameworks.html
 
 # Available Deep Learning Containers Images
 - Tensorflow, PyTorch, MXNet 빌트인 이미지 리스트
 
 https://github.com/aws/deep-learning-containers/blob/master/available_images.md
+
+# Bring Your Own Model (XGboost)
+- BYOM (로컬에서 모델 생성 후에 세이지 메이커에서 배포)
+
+https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/xgboost_bring_your_own_model
+
+
+# How to implement PCA with Python and scikit-learn: Theory & Code
+Python, SKLearn으로 PCA 구현 코드
+
+https://medium.com/ai-in-plain-english/how-to-implement-pca-with-python-and-scikit-learn-22f3de4e5983
+
