@@ -51,7 +51,7 @@ def input_fn(input_data, request_content_type):
     We currently only take csv input. 
     """
   
-    print("input_fn: Starting")
+    print("### input_fn: Starting ###")
     print("type of input_data: ", type(input_data))
     print("request_content_type: ", request_content_type)
         
@@ -127,26 +127,9 @@ def predict_fn(input_data, model):
 
         return features
     
+        
+    # In th ecase of not being set to env. variable        
     if os.getenv('TRANSFORM_MODE') == 'inverse-label-transform':
-        print("predcit_fn - TRANSFORM_MODE: ", os.getenv('TRANSFORM_MODE'))
-        # model, PCA model, has transform()
-        print("type of input_data: ", type(input_data))
-        print("shape of input_data: ", input_data.shape)        
-        print("head of input_data: \n ", input_data[0:2])  
-        
-        payload = input_data
-
-        num_cols = int(os.getenv('LENGTH_COLS'))
-
-        payload = payload.values.reshape(-1,num_cols)
-        features = model.transform(payload)
-
-        logging.info(f"predict_fn: PCA components: \n'{features}'")    
-
-        return features
-        
-    # In the case of not being set to env. variable        
-    if os.getenv('TRANSFORM_MODE') == None:
         print("predcit_fn - TRANSFORM_MODE: ", os.getenv('TRANSFORM_MODE'))
         # model, PCA model, has transform()
         print("type of input_data: ", type(input_data))
@@ -176,12 +159,13 @@ def output_fn(prediction, accept):
     import numpy as np
     
     logging.info(f"Output_fn: prdiction - '{prediction}' ")                
-    print("type of accept : ", accept )
+    print("Output_fn-type of accept : ", accept )
     
     accept = 'text/csv'
     if type(prediction) is not np.ndarray:
         prediction=prediction.toarray()
     
+    print("output_fn-type of prediction: ", type(prediction))    
    
     if accept == 'text/csv':
         print("type of accept after a change : ", accept )        
@@ -200,6 +184,3 @@ def output_fn(prediction, accept):
 # algo-1-dhteh_1  |   File "/miniconda3/lib/python3.7/site-packages/sagemaker_sklearn_container/serving.py", line 70, in default_predict_fn
 # algo-1-dhteh_1  |     output = model.predict(input_data)
 # algo-1-dhteh_1  | AttributeError: 'PCA' object has no attribute 'predict'
-
-
-

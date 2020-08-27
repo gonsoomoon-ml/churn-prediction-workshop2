@@ -158,6 +158,8 @@ def input_fn(input_data, request_content_type):
     by looking at how many columns were provided.
     """
     
+    print("input_fn-request_content_type: ", request_content_type)
+    print("input_fn-type of input_data: ", type(input_data))    
     
     content_type = request_content_type.lower(
     ) if request_content_type else "text/csv"
@@ -212,7 +214,8 @@ def output_fn(prediction, accept):
     if type(prediction) is not np.ndarray:
         prediction=prediction.toarray()
     
-   
+    print("output_fn-type of prediction: ", type(prediction))
+    
     if accept == "application/json": # Code in the case of future use
         instances = []
         for row in prediction.tolist():
