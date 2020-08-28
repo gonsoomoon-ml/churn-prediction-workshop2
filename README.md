@@ -20,6 +20,10 @@
 
 ## 기술적 내용 (Technical Coverage)
 
+### 0. Bring Your Own Container (BYOC) 구현 방법
+BYOC가 익숙하지 않은 분은 아래 "바로 가기"를 클릭하여 관련 설명을 보세요.
+- [바로가기](BYOC/README.md)
+
 ### 1. 데이타 플로우 관점의 Inference Pipeline
 
 아래 그림은 input으로 Raw Input 이 SageMaker Endpoint에 제공되면, Inference Pipeline 의 4개의 컨테이너안에 있는 모델들이 각각 결과를 제공하는 과정을 보여 주고 있습니다. Raw Input이 첫 번재 컨테이너를 통과하면 전처리된 피쳐가 생성이 되고, 두 번째 컨테이너를 통과하면 차원이 축소된 피쳐가 생성이 되고, 세 번째 컨테이너를 통과 하면 score가 생성이 되고, 마지막 컨테이너를 통과 하면 True or False 값을 생성 합니다. 
@@ -81,14 +85,21 @@
 
 
 ---
-- 이 워크샵은 아래 블로그들을 참조하여 작성을 함.
+
 ## Reference:
-    * Blog: Visualizing Amazon SageMaker machine learning predictions with Amazon QuickSight
-        * https://aws.amazon.com/blogs/machine-learning/making-machine-learning-predictions-in-amazon-quicksight-and-amazon-sagemaker/
-        * Git
-            * https://github.com/aws-samples/quicksight-sagemaker-integration-blog
+* Blog: Visualizing Amazon SageMaker machine learning predictions with Amazon QuickSight
+    * https://aws.amazon.com/blogs/machine-learning/making-machine-learning-predictions-in-amazon-quicksight-and-amazon-sagemaker/
+     * Git
+         * https://github.com/aws-samples/quicksight-sagemaker-integration-blog
+
+
+* Blog: Preprocess input data before making predictions using Amazon SageMaker inference pipelines and Scikit-learn
+    * https://aws.amazon.com/blogs/machine-learning/preprocess-input-data-before-making-predictions-using-amazon-sagemaker-inference-pipelines-and-scikit-learn/
+    * Git: Inference Pipeline with Scikit-learn and Linear Learner
+        * https://github.com/awslabs/amazon-sagemaker-examples/blob/master/sagemaker-python-sdk/scikit_learn_inference_pipeline/Inference%20Pipeline%20with%20Scikit-learn%20and%20Linear%20Learner.ipynb
             
-    * Blog: Preprocess input data before making predictions using Amazon SageMaker inference pipelines and Scikit-learn
-        * https://aws.amazon.com/blogs/machine-learning/preprocess-input-data-before-making-predictions-using-amazon-sagemaker-inference-pipelines-and-scikit-learn/
-        * Git: Inference Pipeline with Scikit-learn and Linear Learner
-            * https://github.com/awslabs/amazon-sagemaker-examples/blob/master/sagemaker-python-sdk/scikit_learn_inference_pipeline/Inference%20Pipeline%20with%20Scikit-learn%20and%20Linear%20Learner.ipynb
+            
+- How to implement PCA with Python and scikit-learn: Theory & Code
+Python, SKLearn으로 PCA 구현 코드
+    - https://medium.com/ai-in-plain-english/how-to-implement-pca-with-python-and-scikit-learn-22f3de4e5983
+            
